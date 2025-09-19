@@ -7,17 +7,17 @@
     body {
       margin: 0;
       font-family: 'Dancing Script', cursive;
-      background: linear-gradient(to bottom, #fff0f6, #ffe6eb);
+      background: url('https://img.freepik.com/free-vector/polka-style-cute-love-heart-pattern-textile-fabric-print_1017-52352.jpg?semt=ais_hybrid&w=740&q=80') no-repeat center center;
+      background-size: cover;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       min-height: 100vh;
-      padding: 20px;
+      padding: 40px 20px;
     }
 
     #blowBtn {
-      margin-top: 10px;
       padding: 14px 28px;
       font-size: 20px;
       background: #6f4e37; /* chocolate */
@@ -34,10 +34,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       margin: 40px 0;
     }
 
-    /* Plate */
     .plate {
       position: absolute;
       bottom: -30px;
@@ -49,12 +49,11 @@
       z-index: -1;
     }
 
-    /* Cake */
     .cake {
       position: relative;
       width: 260px;
       height: 180px;
-      background: #5c3317; /* chocolate */
+      background: #5c3317; 
       border-radius: 40px 40px 60px 60px;
       box-shadow: 0 8px 15px rgba(0,0,0,0.3);
       display: flex;
@@ -63,7 +62,6 @@
       padding-top: 20px;
     }
 
-    /* Cream */
     .cream {
       position: absolute;
       top: -20px;
@@ -74,7 +72,6 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.1) inset;
     }
 
-    /* Candles */
     .candles {
       position: absolute;
       top: -60px;
@@ -105,11 +102,9 @@
       to { transform: scale(1.2); opacity: 0.6; }
     }
 
-    /* Balloons */
     .balloon {
       width: 60px;
       height: 80px;
-      background: pink;
       border-radius: 50% 50% 45% 55%;
       position: absolute;
       top: 20px;
@@ -149,19 +144,29 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
 
-    .message {
-      margin-bottom: 20px;
-      font-size: 28px;
+    #makeWish {
+      font-size: 24px;
+      font-weight: bold;
       color: #d6336c;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .message {
+      font-size: 28px;
+      color: #000;
+      font-weight: bold;
       display: none;
+      text-align: center;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <!-- Top -->
+  <!-- Top: Blow the Candles -->
   <button id="blowBtn">🎤 Blow the Candles</button>
 
-  <!-- Cake section -->
+  <!-- Center: Cake -->
   <div class="cake-wrapper">
     <div class="balloon left"></div>
     <div class="cake">
@@ -172,24 +177,26 @@
     <div class="balloon right"></div>
   </div>
 
-<!-- Bottom -->
-<div class="message" id="message">
-  <strong>My Love Udaylu,</strong><br><br>
-  Happy Birthday, my love.<br><br>
-  Though miles may keep us apart today, know that no distance can dim the joy of celebrating <em>you</em>.<br>
-  Every moment of you is a treasure to my heart, for you are my bundle of happiness.<br><br>
-  With each passing day, my love for you grows deeper.It was us who kept trying to be together even in hard times and look at us now we have come so far even more closer than ever.<br>
-  You make me feel seen, cherished, and truly worthy.<br>
-  I am grateful every single day for the gift of you in my life,a soul so amazing, a heart so kind, a love I could never imagine losing.<br><br>
-  I support your dreams, and I will be with you through every thick and thin.<br>
-  May the whole world be against you, but know that I will always stand by your side.You know something you inspire me always(Im not joking).You are my bestest friend,my future hubby,my partner,my first love and everything.I cant wait to be your wifey making our own cute family ,eating our fav food dancing and having absolute fun ride .<br><br>
-  I wish for all your dreams to bloom like stars in the night sky, and for every wish you whisper, I’ll be there by your side,walking through every joy, every hope, every tomorrow.<br>
-  You are my forever, my heart, my home.<br><br>
-  I love you more than words can express Udaylu.<br><br>
-  <strong>Forever yours,</strong><br>
-  khismis ❤️
-</div>
+  <!-- Bottom: Make a Wish (shown before blow) -->
+  <div id="makeWish">✨ Make a Wish ✨</div>
 
+  <!-- Letter/message (hidden initially) -->
+  <div class="message" id="message">
+    <strong>My Love Udaylu,</strong><br><br>
+    Happy Birthday, my love.<br><br>
+    Though miles may keep us apart today, know that no distance can dim the joy of celebrating <em>you</em>.<br>
+    Every moment of you is a treasure to my heart, for you are my bundle of happiness.<br><br>
+    With each passing day, my love for you grows deeper. It was us who kept trying to be together even in hard times and look at us now we have come so far even more closer than ever.<br>
+    You make me feel seen, cherished, and truly worthy.<br>
+    I am grateful every single day for the gift of you in my life, a soul so amazing, a heart so kind, a love I could never imagine losing.<br><br>
+    I support your dreams, and I will be with you through every thick and thin.<br>
+    May the whole world be against you, but know that I will always stand by your side. You know something you inspire me always (I'm not joking). You are my bestest friend, my future hubby, my partner, my first love and everything. I can't wait to be your wifey making our own cute family, eating our fav food, dancing and having absolute fun ride.<br><br>
+    I wish for all your dreams to bloom like stars in the night sky, and for every wish you whisper, I’ll be there by your side, walking through every joy, every hope, every tomorrow.<br>
+    You are my forever, my heart, my home.<br><br>
+    I love you more than words can express Udaylu.<br><br>
+    <strong>Forever yours,</strong><br>
+    khismis ❤️
+  </div>
 
   <!-- Popup -->
   <div class="popup" id="popup">
@@ -197,7 +204,7 @@
   </div>
 
   <script>
-    // Create 23 candles
+    // Create candles
     const candleContainer = document.getElementById("candles");
     for (let i = 0; i < 23; i++) {
       const candle = document.createElement("div");
@@ -210,10 +217,11 @@
 
     const blowBtn = document.getElementById("blowBtn");
     const popup = document.getElementById("popup");
+    const makeWish = document.getElementById("makeWish");
     const message = document.getElementById("message");
 
     blowBtn.onclick = async () => {
-      popup.style.display = "flex"; // show popup
+      popup.style.display = "flex";
       try {
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -229,10 +237,11 @@
             sum += Math.abs(dataArray[i] - 128);
           }
           let volume = sum / dataArray.length;
-          if (volume > 20) { // sensitivity
+          if (volume > 20) {
             document.querySelectorAll(".flame").forEach(f => f.style.display = "none");
             popup.style.display = "none";
-            message.style.display = "block";
+            makeWish.style.display = "none"; // hide Make a Wish
+            message.style.display = "block";   // show letter/message
           } else {
             requestAnimationFrame(checkBlow);
           }
