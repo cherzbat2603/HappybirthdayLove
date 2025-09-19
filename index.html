@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy 23rd 🎂</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Dancing Script', cursive;
+      background: linear-gradient(to bottom, #fff0f6, #ffe6eb);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    #blowBtn {
+      margin-top: 10px;
+      padding: 14px 28px;
+      font-size: 20px;
+      background: #6f4e37; /* chocolate */
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #blowBtn:hover { background: #4b2e1a; }
+
+    .cake-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0;
+    }
+
+    /* Plate */
+    .plate {
+      position: absolute;
+      bottom: -30px;
+      width: 320px;
+      height: 40px;
+      background: #f8f8f8;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2) inset;
+      z-index: -1;
+    }
+
+    /* Cake */
+    .cake {
+      position: relative;
+      width: 260px;
+      height: 180px;
+      background: #5c3317; /* chocolate */
+      border-radius: 40px 40px 60px 60px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 20px;
+    }
+
+    /* Cream */
+    .cream {
+      position: absolute;
+      top: -20px;
+      width: 100%;
+      height: 40px;
+      background: #fff;
+      border-radius: 50% 50% 0 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1) inset;
+    }
+
+    /* Candles */
+    .candles {
+      position: absolute;
+      top: -60px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+    .candle {
+      width: 8px;
+      height: 50px;
+      background: #fff;
+      border-radius: 3px;
+      position: relative;
+    }
+    .flame {
+      width: 12px;
+      height: 18px;
+      background: radial-gradient(circle, #ffec99, #ffb347);
+      border-radius: 50%;
+      position: absolute;
+      top: -18px;
+      left: -2px;
+      animation: flicker 0.2s infinite alternate;
+      box-shadow: 0 0 8px 3px rgba(255, 200, 0, 0.7);
+    }
+    @keyframes flicker {
+      from { transform: scale(1); opacity: 0.9; }
+      to { transform: scale(1.2); opacity: 0.6; }
+    }
+
+    /* Balloons */
+    .balloon {
+      width: 60px;
+      height: 80px;
+      background: pink;
+      border-radius: 50% 50% 45% 55%;
+      position: absolute;
+      top: 20px;
+      animation: float 6s ease-in-out infinite;
+    }
+    .balloon::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 40px;
+      background: #888;
+    }
+    .balloon.left { left: -100px; background: #ff99cc; animation-delay: 0s; }
+    .balloon.right { right: -100px; background: #87cefa; animation-delay: 3s; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .popup {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+    .popup-content {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 15px;
+      font-size: 20px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .message {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #d6336c;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top -->
+  <button id="blowBtn">🎤 Blow the Candles</button>
+
+  <!-- Cake section -->
+  <div class="cake-wrapper">
+    <div class="balloon left"></div>
+    <div class="cake">
+      <div class="cream"></div>
+      <div class="candles" id="candles"></div>
+    </div>
+    <div class="plate"></div>
+    <div class="balloon right"></div>
+  </div>
+
+<!-- Bottom -->
+<div class="message" id="message">
+  <strong>My Love Udaylu,</strong><br><br>
+  Happy Birthday, my love.<br><br>
+  Though miles may keep us apart today, know that no distance can dim the joy of celebrating <em>you</em>.<br>
+  Every moment of you is a treasure to my heart, for you are my bundle of happiness.<br><br>
+  With each passing day, my love for you grows deeper.It was us who kept trying to be together even in hard times and look at us now we have come so far even more closer than ever.<br>
+  You make me feel seen, cherished, and truly worthy.<br>
+  I am grateful every single day for the gift of you in my life,a soul so amazing, a heart so kind, a love I could never imagine losing.<br><br>
+  I support your dreams, and I will be with you through every thick and thin.<br>
+  May the whole world be against you, but know that I will always stand by your side.You know something you inspire me always(Im not joking).You are my bestest friend,my future hubby,my partner,my first love and everything.I cant wait to be your wifey making our own cute family ,eating our fav food dancing and having absolute fun ride .<br><br>
+  I wish for all your dreams to bloom like stars in the night sky, and for every wish you whisper, I’ll be there by your side,walking through every joy, every hope, every tomorrow.<br>
+  You are my forever, my heart, my home.<br><br>
+  I love you more than words can express Udaylu.<br><br>
+  <strong>Forever yours,</strong><br>
+  khismis ❤️
+</div>
+
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content" id="popupText">🎤 Listening for your blow...</div>
+  </div>
+
+  <script>
+    // Create 23 candles
+    const candleContainer = document.getElementById("candles");
+    for (let i = 0; i < 23; i++) {
+      const candle = document.createElement("div");
+      candle.className = "candle";
+      const flame = document.createElement("div");
+      flame.className = "flame";
+      candle.appendChild(flame);
+      candleContainer.appendChild(candle);
+    }
+
+    const blowBtn = document.getElementById("blowBtn");
+    const popup = document.getElementById("popup");
+    const message = document.getElementById("message");
+
+    blowBtn.onclick = async () => {
+      popup.style.display = "flex"; // show popup
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const source = audioCtx.createMediaStreamSource(stream);
+        const analyser = audioCtx.createAnalyser();
+        source.connect(analyser);
+        const dataArray = new Uint8Array(analyser.fftSize);
+
+        function checkBlow() {
+          analyser.getByteTimeDomainData(dataArray);
+          let sum = 0;
+          for (let i = 0; i < dataArray.length; i++) {
+            sum += Math.abs(dataArray[i] - 128);
+          }
+          let volume = sum / dataArray.length;
+          if (volume > 20) { // sensitivity
+            document.querySelectorAll(".flame").forEach(f => f.style.display = "none");
+            popup.style.display = "none";
+            message.style.display = "block";
+          } else {
+            requestAnimationFrame(checkBlow);
+          }
+        }
+        checkBlow();
+      } catch (err) {
+        popup.style.display = "none";
+        alert("Microphone access denied.");
+      }
+    };
+  </script>
+</body>
+</html>
